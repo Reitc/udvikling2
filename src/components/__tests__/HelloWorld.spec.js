@@ -9,3 +9,12 @@ describe('HelloWorld', () => {
     expect(wrapper.text()).toContain('Hello Vitest')
   })
 })
+
+describe('HelloWorld', () => {
+  it('tests inputfield', () => {
+    const wrapper = mount(HelloWorld)
+    const input = wrapper.find('input')
+    input.setValue('Hello Vitest')
+    expect(input.element.value).toBe('Hello Vitest')
+  })
+})
