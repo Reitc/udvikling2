@@ -3,12 +3,12 @@ name: 'Linting & test'
 on: push
 
 jobs:
-  name: 'Linting'
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v4
-    - name: 'Installs packages'
-      run: npm install
-    - name: 'Execute linter'
-      run: npm run lint
+  Linting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Installs packages'
+        run: npm install
+      - name: 'Execute linter'
+        run: npm run lint
     
