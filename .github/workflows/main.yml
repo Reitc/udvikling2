@@ -20,3 +20,11 @@ jobs:
       - uses: cypress-io/github-action@v6
         with:
           start: npm run dev
+  Unit-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Installs packages'
+        run: npm install
+      - name: 'Run unit test'
+        run: npm rum test:unit
