@@ -11,4 +11,13 @@ jobs:
         run: npm install
       - name: 'Execute linter'
         run: npm run lint
-    
+  E2E-Test:
+    runs-on: ubuntu:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Installs packages'
+        run: npm install
+      - uses: cypress-io/github-actions@v6
+      with:
+        start: npm run dev
+  
